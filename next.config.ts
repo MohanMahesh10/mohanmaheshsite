@@ -4,8 +4,6 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   output: 'export',
-  basePath: '/mohanmaheshsite',
-  assetPrefix: '/mohanmaheshsite',
   images: {
     unoptimized: true,
   },
