@@ -24,7 +24,7 @@ export default function Hero() {
                     <div className="w-32 h-32 md:w-40 md:h-40 relative rounded-full overflow-hidden border-4 border-white shadow-[0_0_40px_-10px_rgba(0,0,0,0.1)] mx-auto group">
                         <div className="absolute inset-0 bg-gradient-to-tr from-black/5 to-gray-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
                         <Image
-                            src="/profile.jpg"
+                            src="/mohanmaheshsite/profile.jpg"
                             alt="Mohan Mahesh"
                             fill
                             className="object-cover transition-transform duration-500 group-hover:scale-110"
