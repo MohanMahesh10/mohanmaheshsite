@@ -14,7 +14,9 @@ export default function Contact() {
         e.preventDefault();
         setIsSubmitting(true);
 
-        const formData = new FormData(e.currentTarget);
+        // Store form reference before async operation
+        const form = e.currentTarget;
+        const formData = new FormData(form);
 
         // Add your Web3Forms access key here
         // Get it from: https://web3forms.com
@@ -30,7 +32,7 @@ export default function Contact() {
 
             if (data.success) {
                 setIsSuccess(true);
-                e.currentTarget.reset();
+                form.reset(); // Use stored reference instead of e.currentTarget
             } else {
                 console.error("Form submission error:", data);
                 alert("Failed to send message. Please try again or email me directly.");
