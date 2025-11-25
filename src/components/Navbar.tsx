@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 import { NAV_LINKS, SOCIAL_LINKS } from "@/lib/data";
+import { BASE_PATH } from "@/lib/config";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +37,7 @@ export default function Navbar() {
                     >
                         <div className="relative w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden border-2 border-black/10 group-hover:border-black/20 transition-colors">
                             <Image
-                                src="/profile.jpg"
+                                src={`${BASE_PATH}/profile.jpg`}
                                 alt="Mohan Mahesh"
                                 fill
                                 className="object-cover"

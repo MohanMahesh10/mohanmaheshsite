@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Mail } from "lucide-react";
+import { BASE_PATH } from "@/lib/config";
 
 export default function Hero() {
     return (
@@ -17,7 +18,7 @@ export default function Hero() {
                     <div className="w-28 h-28 md:w-40 md:h-40 relative rounded-full overflow-hidden border-4 border-white shadow-[0_0_40px_-10px_rgba(0,0,0,0.1)] mx-auto group animate-float">
                         <div className="absolute inset-0 bg-gradient-to-tr from-black/5 to-gray-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
                         <Image
-                            src="/profile.jpg"
+                            src={`${BASE_PATH}/profile.jpg`}
                             alt="Mohan Mahesh"
                             fill
                             className="object-cover transition-transform duration-500 group-hover:scale-110"
