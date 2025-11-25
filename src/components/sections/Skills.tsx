@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { SKILLS } from "@/lib/data";
+import TextReveal from "@/components/effects/TextReveal";
 
 const SkillCategory = ({ title, skills, delay }: { title: string; skills: string[]; delay: number }) => (
     <motion.div
@@ -16,11 +17,18 @@ const SkillCategory = ({ title, skills, delay }: { title: string; skills: string
             {skills.map((skill, index) => (
                 <motion.span
                     key={skill}
-                    initial={{ opacity: 0, scale: 0.8 }}
+                    initial={{ opacity: 0, scale: 0.3 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: delay + index * 0.05 }}
-                    className="px-4 py-2 rounded-full bg-black/5 border border-black/5 text-sm font-medium text-gray-700 hover:bg-black/10 hover:border-black/20 transition-colors cursor-default"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    transition={{
+                        duration: 0.6,
+                        delay: delay + index * 0.05,
+                        type: "spring",
+                        stiffness: 260,
+                        damping: 20
+                    }}
+                    className="px-4 py-2 rounded-full bg-black/5 border border-black/5 text-sm font-medium text-gray-700 hover:bg-black/10 hover:border-black/20 hover:shadow-md transition-all cursor-default"
                 >
                     {skill}
                 </motion.span>
@@ -40,7 +48,7 @@ export default function Skills() {
                     transition={{ duration: 0.5 }}
                     className="mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6">Technical Arsenal</h2>
+                    <TextReveal text="Technical Arsenal" className="text-3xl md:text-4xl font-bold mb-6" />
                     <p className="text-lg text-gray-600 max-w-2xl">
                         A comprehensive toolkit for building scalable, high-performance applications.
                     </p>
