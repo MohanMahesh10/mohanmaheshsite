@@ -4,18 +4,43 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, CheckCircle, Loader2 } from "lucide-react";
 import { SOCIAL_LINKS } from "@/lib/data";
+import { WEB3FORMS_CONFIG } from "@/lib/config";
 
 export default function Contact() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate API call
-        await new Promise((resolve) => setTimeout(resolve, 1500));
-        setIsSubmitting(false);
-        setIsSuccess(true);
+
+        const formData = new FormData(e.currentTarget);
+
+        // Add your Web3Forms access key here
+        // Get it from: https://web3forms.com
+        formData.append("access_key", WEB3FORMS_CONFIG.accessKey);
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setIsSuccess(true);
+                e.currentTarget.reset();
+            } else {
+                console.error("Form submission error:", data);
+                alert("Failed to send message. Please try again or email me directly.");
+            }
+        } catch (error) {
+            console.error("Form submission error:", error);
+            alert("Failed to send message. Please try again or email me directly.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -112,6 +137,7 @@ export default function Contact() {
                                     <input
                                         type="text"
                                         id="name"
+                                        name="name"
                                         required
                                         className="w-full px-4 py-3 rounded-lg bg-black/20 border border-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                                         placeholder="Your Name"
@@ -124,6 +150,7 @@ export default function Contact() {
                                     <input
                                         type="email"
                                         id="email"
+                                        name="email"
                                         required
                                         className="w-full px-4 py-3 rounded-lg bg-black/20 border border-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                                         placeholder="your@email.com"
@@ -135,6 +162,7 @@ export default function Contact() {
                                     </label>
                                     <textarea
                                         id="message"
+                                        name="message"
                                         required
                                         rows={4}
                                         className="w-full px-4 py-3 rounded-lg bg-black/20 border border-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
