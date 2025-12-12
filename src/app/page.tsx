@@ -5,6 +5,7 @@ import Experience from "@/components/sections/Experience";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import ScrollProgress from "@/components/effects/ScrollProgress";
+// Trigger fresh deployment
 
 export default function Home() {
     return (
