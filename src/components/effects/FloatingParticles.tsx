@@ -12,7 +12,7 @@ interface Particle {
     color: string;
 }
 
-export default function AntigravityParticles() {
+export default function FloatingParticles() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const mouseRef = useRef({ x: 0, y: 0 });
     const particlesRef = useRef<Particle[]>([]);
