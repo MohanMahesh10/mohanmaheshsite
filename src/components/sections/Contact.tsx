@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, CheckCircle, Loader2 } from "lucide-react";
+import { Send, CheckCircle, Loader2, PenTool, Calendar } from "lucide-react";
 import { SOCIAL_LINKS } from "@/lib/data";
 import { WEB3FORMS_CONFIG } from "@/lib/config";
 
@@ -113,17 +113,19 @@ export default function Contact() {
                                         href={SOCIAL_LINKS.medium}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-muted-foreground hover:text-green-400 transition-colors font-medium"
+                                        className="text-muted-foreground hover:text-green-400 transition-colors font-medium flex items-center gap-1"
                                     >
-                                        📝 Medium Blog
+                                        <PenTool className="w-4 h-4" />
+                                        Medium Blog
                                     </a>
                                     <a
                                         href={SOCIAL_LINKS.topmate}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-muted-foreground hover:text-orange-400 transition-colors font-medium"
+                                        className="text-muted-foreground hover:text-orange-400 transition-colors font-medium flex items-center gap-1"
                                     >
-                                        📅 Book a Call
+                                        <Calendar className="w-4 h-4" />
+                                        Book a Call
                                     </a>
                                 </div>
                             </div>
