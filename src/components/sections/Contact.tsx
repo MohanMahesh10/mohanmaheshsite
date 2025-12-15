@@ -81,8 +81,14 @@ export default function Contact() {
                                 </a>
                             </div>
                             <div>
-                                <p className="text-sm text-muted-foreground mb-1">Phone</p>
-                                <p className="text-lg font-medium">{SOCIAL_LINKS.phone}</p>
+                                <p className="text-sm text-muted-foreground mb-1">Availability</p>
+                                <div className="flex items-center gap-2 mb-1">
+                                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                                    <p className="text-lg font-medium text-green-500">{SOCIAL_LINKS.availability}</p>
+                                </div>
+                                <p className="text-sm text-muted-foreground">
+                                    📍 {SOCIAL_LINKS.location} • 🕒 {SOCIAL_LINKS.timezone}
+                                </p>
                             </div>
                             <div>
                                 <p className="text-sm text-muted-foreground mb-1">Socials</p>
@@ -102,6 +108,14 @@ export default function Contact() {
                                         className="text-muted-foreground hover:text-white transition-colors"
                                     >
                                         LinkedIn
+                                    </a>
+                                    <a
+                                        href={SOCIAL_LINKS.topmate}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-muted-foreground hover:text-orange-400 transition-colors font-medium"
+                                    >
+                                        📅 Book a Call
                                     </a>
                                 </div>
                             </div>

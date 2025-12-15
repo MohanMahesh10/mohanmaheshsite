@@ -2,12 +2,21 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Mail, Calendar } from "lucide-react";
 import { BASE_PATH } from "@/lib/config";
+import { SOCIAL_LINKS } from "@/lib/data";
+import FloatingCards from "@/components/effects/FloatingCards";
+import AnimatedBackground from "@/components/effects/AnimatedBackground";
 
 export default function Hero() {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20 bg-white">
+            {/* Animated Background */}
+            <AnimatedBackground />
+            
+            {/* Floating Cards */}
+            <FloatingCards />
+            
             <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
@@ -76,6 +85,16 @@ export default function Hero() {
                     >
                         <span className="mr-2">View Projects</span>
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </a>
+
+                    <a
+                        href={SOCIAL_LINKS.topmate}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex h-11 md:h-12 items-center justify-center rounded-full border border-orange-500/20 bg-orange-500/10 px-6 md:px-8 font-medium text-sm md:text-base text-orange-600 transition-all duration-300 hover:bg-orange-500/20 hover:scale-105 hover:border-orange-500/40 w-full md:w-auto hover:shadow-[0_0_20px_-5px_rgba(249,115,22,0.3)]"
+                    >
+                        <Calendar className="mr-2 w-4 h-4" />
+                        Book a Call
                     </a>
 
                     <a

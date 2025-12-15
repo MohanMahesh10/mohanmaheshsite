@@ -108,6 +108,9 @@ export const PROJECTS = [
 export const SOCIAL_LINKS = {
     github: "https://github.com/MohanMahesh10",
     linkedin: "https://www.linkedin.com/in/mohan-mahesh-boggavarapu-b1a48b249/",
+    topmate: "https://topmate.io/mohanmahesh",
     email: "boggavarapumohanmahesh@gmail.com",
-    phone: "+91 8919601172",
+    availability: "Available for new opportunities",
+    location: "India (Remote Worldwide)",
+    timezone: "IST (UTC+5:30)",
 };

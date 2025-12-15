@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
+import { Menu, X, Github, Linkedin, Mail, Calendar } from "lucide-react";
 import Image from "next/image";
 import { NAV_LINKS, SOCIAL_LINKS } from "@/lib/data";
 import { BASE_PATH } from "@/lib/config";
@@ -82,6 +82,15 @@ export default function Navbar() {
                             >
                                 <Linkedin className="w-5 h-5" />
                             </a>
+                            <a
+                                href={SOCIAL_LINKS.topmate}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-orange-500 hover:text-orange-600 transition-colors hover:scale-110 transform duration-200"
+                                title="Book a Call"
+                            >
+                                <Calendar className="w-5 h-5" />
+                            </a>
                         </div>
                     </div>
 
@@ -132,6 +141,14 @@ export default function Navbar() {
                                     className="text-gray-500 hover:text-black"
                                 >
                                     <Linkedin className="w-6 h-6" />
+                                </a>
+                                <a
+                                    href={SOCIAL_LINKS.topmate}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-orange-500 hover:text-orange-600"
+                                >
+                                    <Calendar className="w-6 h-6" />
                                 </a>
                             </div>
                         </div>
