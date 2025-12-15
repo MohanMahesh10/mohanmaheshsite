@@ -17,7 +17,7 @@ export const SKILLS = {
         "CI/CD (GitHub Actions)",
         "Linux",
     ],
-    databases: ["PostgreSQL", "MySQL", "Redis"],
+    databases: ["PostgreSQL", "MySQL"],
     concepts: [
         "Data Structures & Algorithms",
         "System Design",

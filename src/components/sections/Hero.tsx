@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { ArrowRight, Mail, Calendar } from "lucide-react";
 import { BASE_PATH } from "@/lib/config";
 import { SOCIAL_LINKS } from "@/lib/data";
-import FloatingCards from "@/components/effects/FloatingCards";
 import AnimatedBackground from "@/components/effects/AnimatedBackground";
 
 export default function Hero() {
@@ -13,9 +12,6 @@ export default function Hero() {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20 bg-white">
             {/* Animated Background */}
             <AnimatedBackground />
-            
-            {/* Floating Cards */}
-            <FloatingCards />
             
             <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
                 <motion.div
