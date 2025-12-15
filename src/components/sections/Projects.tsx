@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, ExternalLink, ArrowUpRight } from "lucide-react";
-import { PROJECTS } from "@/lib/data";
+import { Github, ExternalLink, ArrowUpRight, FileText, BookOpen } from "lucide-react";
+import { PROJECTS, IEEE_PUBLICATIONS } from "@/lib/data";
 import { useTilt } from "@/hooks/useTilt";
 import TextReveal from "@/components/effects/TextReveal";
 
@@ -101,11 +101,54 @@ export default function Projects() {
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                     {PROJECTS.map((project, index) => (
                         <ProjectCard key={index} project={project} index={index} />
                     ))}
                 </div>
+
+                {/* IEEE Publications Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="mt-16"
+                >
+                    <div className="flex items-center gap-3 mb-8">
+                        <BookOpen className="w-8 h-8 text-black" />
+                        <h3 className="text-2xl md:text-3xl font-bold">IEEE Publications</h3>
+                    </div>
+                    
+                    <div className="grid gap-6">
+                        {IEEE_PUBLICATIONS.map((publication, index) => (
+                            <motion.a
+                                key={index}
+                                href={publication.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="group glass-card glow-effect p-6 rounded-xl hover:-translate-y-1 transition-all duration-300 flex items-start gap-4"
+                            >
+                                <div className="p-2 rounded-lg bg-black/5 border border-black/10 flex-shrink-0">
+                                    <FileText className="w-5 h-5 text-black" />
+                                </div>
+                                <div className="flex-grow">
+                                    <h4 className="font-semibold text-black group-hover:text-black/80 transition-colors mb-2 leading-relaxed">
+                                        {publication.title}
+                                    </h4>
+                                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                                        <span>IEEE Xplore</span>
+                                        <ExternalLink className="w-3 h-3" />
+                                    </div>
+                                </div>
+                            </motion.a>
+                        ))}
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

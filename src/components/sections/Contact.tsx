@@ -110,6 +110,14 @@ export default function Contact() {
                                         LinkedIn
                                     </a>
                                     <a
+                                        href={SOCIAL_LINKS.medium}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-muted-foreground hover:text-green-400 transition-colors font-medium"
+                                    >
+                                        📝 Medium Blog
+                                    </a>
+                                    <a
                                         href={SOCIAL_LINKS.topmate}
                                         target="_blank"
                                         rel="noopener noreferrer"

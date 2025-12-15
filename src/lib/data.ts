@@ -55,7 +55,7 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
     {
-        title: "BestHire",
+        title: "BestHire Agent",
         subtitle: "AI-Powered Recruitment Platform",
         tags: ["Next.js 14", "TypeScript", "TensorFlow.js", "Google Cloud"],
         description:
@@ -109,8 +109,20 @@ export const SOCIAL_LINKS = {
     github: "https://github.com/MohanMahesh10",
     linkedin: "https://www.linkedin.com/in/mohan-mahesh-boggavarapu-b1a48b249/",
     topmate: "https://topmate.io/mohanmahesh",
+    medium: "https://medium.com/@boggavarapumohanmahesh",
     email: "boggavarapumohanmahesh@gmail.com",
     availability: "Available for new opportunities",
     location: "India (Remote Worldwide)",
     timezone: "IST (UTC+5:30)",
 };
+
+export const IEEE_PUBLICATIONS = [
+    {
+        title: "Design and Evaluation of a Deep Learning Model for Counting Objects in Satellite Images",
+        url: "https://ieeexplore.ieee.org/document/10503432",
+    },
+    {
+        title: "Alzheimer Disease Prediction Using Recursive Feature Elimination and Artificial Neural Network",
+        url: "https://ieeexplore.ieee.org/document/10276170",
+    },
+];
