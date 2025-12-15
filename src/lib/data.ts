@@ -19,9 +19,9 @@ export const SKILLS = {
     ],
     databases: ["PostgreSQL", "MySQL"],
     concepts: [
-        "Data Structures & Algorithms",
+        "Scalable Systems",
         "System Design",
-        "Microservices",
+        "Microservices", 
         "Event-Driven Architecture",
         "Agentic AI Patterns",
     ],

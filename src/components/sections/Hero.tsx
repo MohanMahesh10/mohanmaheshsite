@@ -5,14 +5,10 @@ import { motion } from "framer-motion";
 import { ArrowRight, Mail, Calendar } from "lucide-react";
 import { BASE_PATH } from "@/lib/config";
 import { SOCIAL_LINKS } from "@/lib/data";
-import AnimatedBackground from "@/components/effects/AnimatedBackground";
 
 export default function Hero() {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20 bg-white">
-            {/* Animated Background */}
-            <AnimatedBackground />
-            
             <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
@@ -65,8 +61,7 @@ export default function Hero() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="text-base md:text-2xl text-gray-600 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed px-4"
                 >
-                    Building production-ready APIs, scalable AI systems, and data-driven
-                    web applications.
+                    Building production-ready APIs, scalable AI systems, and data-driven applications.
                 </motion.p>
 
                 <motion.div

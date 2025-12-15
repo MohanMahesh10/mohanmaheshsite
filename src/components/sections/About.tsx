@@ -42,7 +42,7 @@ export default function About() {
         },
         {
             icon: <Code2 className="w-8 h-8 text-black" />,
-            title: "Full Stack",
+            title: "Application Development",
             desc: "Crafting responsive, high-performance web apps with Next.js, React, and Tailwind.",
         },
         {
@@ -65,9 +65,9 @@ export default function About() {
                     <TextReveal text="About Me" className="text-3xl md:text-4xl font-bold mb-6" />
                     <p className="text-lg text-gray-600 leading-relaxed">
                         Aspiring AI and Software Engineer skilled in machine learning, deep
-                        learning, and full-stack development. Experienced in building
+                        learning, and application workflow development. Experienced in building
                         production-ready APIs, containerized deployments, and data-driven
-                        features. Strong foundation in data structures, algorithms, and OOP.
+                        features. Strong foundation in designing systems, architecture and OOP.
                         Seeking SDE/AI roles to ship impactful features efficiently.
                     </p>
                 </motion.div>
