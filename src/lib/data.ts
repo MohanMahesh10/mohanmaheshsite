@@ -126,3 +126,22 @@ export const IEEE_PUBLICATIONS = [
         url: "https://ieeexplore.ieee.org/document/10276170",
     },
 ];
+
+export const CERTIFICATIONS = [
+    {
+        title: "Microsoft Certified: Azure Fundamentals",
+        url: "https://learn.microsoft.com/en-us/users/boggavarapumohanmahesh-9976/credentials/2993de72171597e7",
+    },
+    {
+        title: "Microsoft Certified: Azure AI Fundamentals",
+        url: "https://learn.microsoft.com/en-us/users/boggavarapumohanmahesh-9976/credentials/c6f70f21800bbee3",
+    },
+    {
+        title: "Google Cloud Certified: Cloud Digital Leader Certification",
+        url: "https://www.credly.com/badges/76b42b7f-9d26-412a-a8ca-f9d75c665391/public_url",
+    },
+    {
+        title: "Google Cloud Certified: Professional Cloud Developer Certification",
+        url: "https://www.credly.com/badges/a7524a1c-e566-4c45-a358-0e1631bd452d/public_url",
+    },
+];
