@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description: "Portfolio of Mohan Mahesh, a Full-Stack Developer and AI Engineer specializing in scalable systems and machine learning.",
     icons: {
         icon: [
-            { url: "/profile.jpg", type: "image/jpeg" },
+            { url: "/profile-icon.svg", type: "image/svg+xml" },
         ],
         apple: [{ url: "/profile.jpg", type: "image/jpeg" }],
     },
