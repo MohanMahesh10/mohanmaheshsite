@@ -9,6 +9,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
     title: "Mohan Mahesh | AI & Software Engineer",
     description: "Portfolio of Mohan Mahesh, a Full-Stack Developer and AI Engineer specializing in scalable systems and machine learning.",
+    icons: {
+        icon: [
+            { url: "/profile.jpg", type: "image/jpeg" },
+        ],
+        apple: [{ url: "/profile.jpg", type: "image/jpeg" }],
+    },
 };
 
 export default function RootLayout({
