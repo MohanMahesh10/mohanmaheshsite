@@ -33,11 +33,16 @@ export const EXPERIENCE = [
         role: "Community Lead & Technical Mentor",
         period: "Aug 2023 – Present",
         description:
-            "Spearheaded technical initiatives and community growth for a developer ecosystem.",
+            "Led technical support, mentoring, and partner engagement across a large developer community.",
         achievements: [
-            "Designed and delivered advanced curriculum on Google Cloud, AI/ML, and Data Warehousing.",
-            "Mentored 200+ developers, driving a 40% increase in community engagement and cloud certification rates.",
-            "Collaborated with core engineering teams to align educational content with emerging industry trends.",
+            "Managed technical support, mentoring, and partner engagement for a community of 19,000+ developers.",
+            "Built and maintained strong relationships with tech creators and community leaders to promote developer experience and community initiatives.",
+            "Delivered hands-on sessions and labs at Google Developer Groups DevFest, Community Days, and online events, providing live troubleshooting during sessions.",
+            "Actively participated across 9 seasons of Code Vipassana, built multiple projects, earned certifications, and was recognized as a Project Pioneer (Level 4).",
+            "Contributed to strategy planning and execution to improve overall developer experience initiatives.",
+            "Collaborated on mentoring, troubleshooting, and continuous engagement with 2,000+ community members across social and technical platforms.",
+            "Improved and optimized community engagement on the Code Vipassana Discord server.",
+            "Gained strong hands-on experience with Google Cloud (GCP), Vertex AI, serverless architectures, Agentic AI, MCP, RAG, AI/ML, databases, Cloud Run, and end-to-end application prototyping across the developer lifecycle",
         ],
     },
     {
